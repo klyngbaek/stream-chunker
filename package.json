@@ -1,6 +1,6 @@
 {
   "name": "stream-chunker",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Splits a stream into chunks of a certain size.",
   "main": "index.js",
   "scripts": {
