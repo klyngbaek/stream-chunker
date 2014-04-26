@@ -3,7 +3,6 @@
   "version": "0.0.0",
   "description": "Splits a stream into chunks of a certain size.",
   "main": "index.js",
-  "readme": "readme",
   "scripts": {
     "test": "node test.js"
   },
