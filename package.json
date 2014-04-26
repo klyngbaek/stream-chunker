@@ -1,0 +1,27 @@
+{
+  "name": "stream-chunker",
+  "version": "0.0.0",
+  "description": "Splits a stream into chunks of a certain size.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": [
+    "stream",
+    "chunk",
+    "chunker",
+    "splitter",
+    "split",
+    "byte",
+    "buffer"
+  ],
+  "author": "Kristian Lyngbaek",
+  "license": "MIT",
+  "dependencies": {
+    "through2": "~0.4.1"
+  },
+  "devDependencies": {
+    "tape": "~2.12.3",
+    "chunky": "~0.0.0"
+  }
+}
