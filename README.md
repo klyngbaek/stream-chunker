@@ -15,7 +15,7 @@ in `chunkSize` byte chunks.
 ```javascript
 var sampleStream = require('lorem-streamer')();
 Chunker = require('stream-chunker');
-var chunker = Chunker(16) // split the stream of data into 4 byte chunks
+var chunker = Chunker(16) // split the stream of data into 16 byte chunks
 // make sure to add any data event listeners to chunker stream
 // before you write any data to it
 chunker.on('data', function(data) {
