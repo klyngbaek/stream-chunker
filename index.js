@@ -7,7 +7,7 @@ module.exports = function (chunkSize) {
     return through2(function (data, enc, next) {
         data = Buffer.concat([buffer, data]);
         var totalLength = data.length;
-        var remainder = totalLength%chunkSize;
+        var remainder = totalLength % chunkSize;
         var cutoff = totalLength - remainder;
         for (var i=0 ; i<cutoff ; i+=chunkSize) {
             var chunk = data.slice(i, i+chunkSize);
