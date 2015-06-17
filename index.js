@@ -1,8 +1,6 @@
 var through2 = require('through2');
 
-module.exports = ByteBatcher;
-
-function ByteBatcher (chunkSize) {
+module.exports = function (chunkSize) {
     // buffer to store the last few bytes of incoming data
     // if it does not divide evenly into chunkSize
     var buffer = new Buffer(0);
