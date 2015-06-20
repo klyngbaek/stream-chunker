@@ -1,5 +1,5 @@
-var test = require('tape');
 var Chunker = require('../index.js');
+var test = require('tape');
 var chunky = require('chunky');
 
 test('testStreamChunker', function (t) {
@@ -16,7 +16,7 @@ test('testStreamChunker', function (t) {
 
     var chunks = chunky(buffer);
 
-    chunker = Chunker(16);
+    var chunker = Chunker(16);
     
     var k=0;
 
