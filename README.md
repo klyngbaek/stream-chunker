@@ -1,4 +1,5 @@
 # stream-chunker
+
 A transform stream which chunks incoming data into `chunkSize` byte chunks.
 
 [![build status](https://secure.travis-ci.org/klyngbaek/stream-chunker.png)](http://travis-ci.org/klyngbaek/stream-chunker)
@@ -8,6 +9,7 @@ A transform stream which chunks incoming data into `chunkSize` byte chunks.
 ## api
 
 ### `var chunker = require('stream-chunker')(chunkSize)`
+
 Returns a new chunker. Chunker is a duplex (tansform) stream. You can write data into the
 chunker, and regardless of the incoming data, the readable side will emit data
 in `chunkSize` byte chunks.
@@ -37,4 +39,5 @@ sampleStream.pipe(chunker); // write some data to chunker to get chunked
 ```
 
 ##License
+
 MIT
