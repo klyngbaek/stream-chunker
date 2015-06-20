@@ -7,7 +7,7 @@ test('Test flush option', function (t) {
     t.plan(2);
 
     function check(data) {
-        t.equals(data.toString('utf8'), '1234');
+        t.equals(data.toString('utf8'), '1234', 'Received only full chunks');
     }
     var chunker = Chunker(4);
     var concatStream = concat(check);
@@ -19,7 +19,7 @@ test('Test flush option', function (t) {
     
 
     function checkFlush(data) {
-        t.equals(data.toString('utf8'), '123456');
+        t.equals(data.toString('utf8'), '123456', 'Received flush data');
     }
     var chunkerFlush = Chunker(4, true);
     var concatStreamFlush = concat(checkFlush);

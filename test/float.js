@@ -2,7 +2,7 @@ var Chunker = require('../index.js');
 var test = require('tape');
 var chunky = require('chunky');
 
-test('testStreamChunker', function (t) {
+test('Test back-to-back float encoding', function (t) {
 
     t.plan(500);
 
