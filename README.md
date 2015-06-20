@@ -13,7 +13,7 @@ Returns a new chunker. Chunker is a duplex (tansform) stream. You can write data
 chunker, and regardless of the incoming data, the readable side will emit data
 in `chunkSize` byte chunks.
 
-- `chunkSize`: `integer` - Size in bytes of the desired chunks
+- `chunkSize`: `integer` - Size in bytes of the desired chunks.
 - `flush`: `boolean` - Optional. Flush inclomplete chunk data on stream end. Default is `false`.
 
 ## An example
