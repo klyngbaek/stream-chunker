@@ -1,6 +1,6 @@
 {
   "name": "stream-chunker",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A transform stream which chunks incoming data into chunkSize byte chunks",
   "main": "index.js",
   "scripts": {
@@ -14,7 +14,8 @@
     "split",
     "byte",
     "buffer",
-    "binary"
+    "binary",
+    "transform"
   ],
   "author": "Kristian Lyngbaek",
   "license": "MIT",
