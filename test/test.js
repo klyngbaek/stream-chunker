@@ -1,5 +1,5 @@
 var test = require('tape');
-var Chunker = require('./index.js');
+var Chunker = require('../index.js');
 var chunky = require('chunky');
 
 test('testStreamChunker', function (t) {
@@ -21,17 +21,17 @@ test('testStreamChunker', function (t) {
     var k=0;
 
     chunker.on('data', function (data) {
-        t.equals(data.length, 16, 'yeah');
+        t.equals(data.length, 16, 'Chunk size correct');
 
         var a = data.readFloatBE(0);
         var b = data.readFloatBE(4);
         var c = data.readFloatBE(8);
         var d = data.readFloatBE(12);
 
-        t.equals(a, k/8);
-        t.equals(b, -k*4);
-        t.equals(c, k*2);
-        t.equals(d, -k);
+        t.equals(a, k/8, 'First float correctly parsed');
+        t.equals(b, -k*4, 'Second float correctly parsed');
+        t.equals(c, k*2, 'Third float correctly parsed');
+        t.equals(d, -k, 'Fourth float correctly parsed');
 
         k++;
     });

@@ -4,8 +4,8 @@ module.exports = function (chunkSize) {
     // buffer to store the last few bytes of incoming data
     // if it does not divide evenly into chunkSize
     var buffer = new Buffer(0);
-    return through2(function (newData, enc, next) {
-        var allData = Buffer.concat([buffer, newData]);
+    return through2(function (data, enc, next) {
+        var allData = Buffer.concat([buffer, data]);
         var totalLength = allData.length;
         var remainder = totalLength % chunkSize;
         var cutoff = totalLength - remainder;
