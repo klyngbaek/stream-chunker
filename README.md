@@ -8,7 +8,7 @@ A transform stream which chunks incoming data into `chunkSize` byte chunks.
 
 ## api
 
-### `var chunker = require('stream-chunker')(chunkSize [, flush])`
+### `var chunker = require('stream-chunker')(chunkSize, [flush])`
 Returns a new chunker. Chunker is a duplex (tansform) stream. You can write data into the
 chunker, and regardless of the incoming data, the readable side will emit data
 in `chunkSize` byte chunks.
