@@ -1,6 +1,8 @@
 # stream-chunker
 A transform stream which chunks incoming data into `chunkSize` byte chunks.
 
+[![build status](https://secure.travis-ci.org/klyngbaek/stream-chunker.png)](http://travis-ci.org/klyngbaek/stream-chunker)
+
 [![NPM](https://nodei.co/npm/stream-chunker.png)](https://nodei.co/npm/stream-chunker/)
 
 ## api
