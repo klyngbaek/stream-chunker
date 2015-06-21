@@ -1,6 +1,6 @@
 {
   "name": "stream-chunker",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A transform stream which chunks incoming data into chunkSize byte chunks",
   "main": "index.js",
   "scripts": {
@@ -24,8 +24,8 @@
   },
   "devDependencies": {
     "chunky": "~0.0.0",
-    "concat-stream": "^1.5.0",
-    "loremipstream": "~1.0.3 ",
+    "concat-stream": "~1.5.0",
+    "loremipstream": "~0.0.3 ",
     "tape": "~2.12.3"
   },
   "repository": {
