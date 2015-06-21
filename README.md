@@ -19,7 +19,7 @@ written to this stream must be a `string` or a `buffer`.
   - `flush`: `boolean` - Optional. Flush incomplete chunk data on stream end. Default is `false`.
   - `encoding`: `string` - Optional. Encoding of String chunks. Must be a valid Buffer encoding, such as `utf8` or `ascii`.
 
-## Simple example
+## Simple Example
 ```
 var fs = require('fs');
 var chunker = require('stream-chunker'); 
@@ -29,7 +29,7 @@ fs.createReadStream('/someFile')
   	.pipe(somethingThatExpects16ByteChunks());
 ```
 
-## Full working example example
+## Full Working Example 
 ```javascript
 // Create sample input stream with 10 byte chunks
 var Lorem = require('loremipstream');
