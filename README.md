@@ -25,7 +25,7 @@ var fs = require('fs');
 var chunker = require('stream-chunker'); 
 
 fs.createReadStream('/someFile')
-  	.pipe(chunks(16))
+  	.pipe(chunker(16))
   	.pipe(somethingThatExpects16ByteChunks());
 ```
 
