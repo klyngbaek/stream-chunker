@@ -16,12 +16,22 @@ in `chunkSize` byte chunks.
 - `chunkSize`: `integer` - Size in bytes of the desired chunks.
 - `flush`: `boolean` - Optional. Flush incomplete chunk data on stream end. Default is `false`.
 
-## An example
+## Simple example
+```
+var fs = require('fs');
+var chunker = require('stream-chunker'); 
+
+fs.createReadStream('/someFile')
+  	.pipe(chunks(16))
+  	.pipe(somethingThatExpects16ByteChunks());
+```
+
+## Full working example example
 ```javascript
 // Create sample input stream with 10 byte chunks
 var Lorem = require('loremipstream');
 var sampleStream = new Lorem({
-	size: 1000,
+	size: 100,
 	dataSize: 10,
 	dataInteval: 100
 });
