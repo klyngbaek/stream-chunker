@@ -18,6 +18,6 @@ var chunker = Chunker(16, opts); // split the stream of data into 4 byte chunks
 chunker.on('data', function(data) {
     // do something with a chunk of data
     // notice the last chunk is the flushed data
-    console.log('Chunk: ' + data;
+    console.log('Chunk: ' + data);
 });
 sampleStream.pipe(chunker); // write some data to chunker to get chunked
