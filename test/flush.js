@@ -5,11 +5,16 @@ var concat = require('concat-stream');
 test('Test flush option', function (t) {
 
     t.plan(2);
+    
+    var opts = {
+        flush: false,
+        encoding: 'utf8'
+    }
 
     function check(data) {
-        t.equals(data.toString('utf8'), '1234', 'Received only full chunks');
+        t.equals(data, '1234', 'Received only full chunks');
     }
-    var chunker = Chunker(4);
+    var chunker = Chunker(4, opts);
     var concatStream = concat(check);
     chunker.pipe(concatStream);
     chunker.write('12');
@@ -17,11 +22,15 @@ test('Test flush option', function (t) {
     chunker.write('56');
     chunker.end();
     
+    var optsFlush = {
+        flush: true,
+        encoding: 'utf8'
+    }
 
     function checkFlush(data) {
-        t.equals(data.toString('utf8'), '123456', 'Received flush data');
+        t.equals(data, '123456', 'Received flush data');
     }
-    var chunkerFlush = Chunker(4, true);
+    var chunkerFlush = Chunker(4, optsFlush);
     var concatStreamFlush = concat(checkFlush);
     chunkerFlush.pipe(concatStreamFlush);
     chunkerFlush.write('12');

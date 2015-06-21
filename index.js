@@ -13,13 +13,18 @@ var through2 = require('through2');
  *                                  Default is false
  * @return {Stream.Transform}       A transform stream
  */
-module.exports = function (chunkSize, flush) {
+module.exports = function (chunkSize, opts) {
+
+    if (!opts) opts = {};
+    var flush = opts.flush;
+    var encoding = opts.encoding;
 
     // buffer to store the last few bytes of incoming data
     // if it does not divide evenly into chunkSize
     var buffer = new Buffer(0);
 
-    var opts = {
+    var transformOpts = {
+        encoding: encoding,
         halfOpen: false,
         objectMode: false
     };
@@ -45,6 +50,6 @@ module.exports = function (chunkSize, flush) {
         };
     }
 
-    return through2(opts, transformFunction, flushFunction);
+    return through2(transformOpts, transformFunction, flushFunction);
 
 };
