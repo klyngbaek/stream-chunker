@@ -1,6 +1,6 @@
 {
   "name": "stream-chunker",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A transform stream which chunks incoming data into chunkSize byte chunks",
   "main": "index.js",
   "scripts": {
