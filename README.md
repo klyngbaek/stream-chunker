@@ -6,7 +6,7 @@ A transform stream which chunks incoming data into `chunkSize` byte chunks.
 
 [![NPM](https://nodei.co/npm/stream-chunker.png)](https://nodei.co/npm/stream-chunker/)
 
-## api
+## API
 
 #### `var chunker = require('stream-chunker')(chunkSize, [opts])`
 Returns a new chunker. Chunker is a duplex (tansform) stream. You can write data into the
