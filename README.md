@@ -45,7 +45,7 @@ var opts = {
 	flush: true,
 	encoding: 'utf8'
 };
-var chunker = Chunker(16, opts); // split the stream of data into 4 byte chunks
+var chunker = Chunker(16, opts);
 // make sure to add any data event listeners to chunker stream
 // before you write any data to it
 chunker.on('data', function(data) {
