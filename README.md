@@ -20,7 +20,7 @@ written to this stream must be a `string` or a `buffer`.
   - `encoding`: `string` - Optional. Encoding of String chunks. Must be a valid Buffer encoding, such as `utf8` or `ascii`.
 
 ## Simple Example
-```
+```javascript
 var fs = require('fs');
 var chunker = require('stream-chunker');
 
