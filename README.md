@@ -9,27 +9,27 @@ A transform stream which chunks incoming data into `chunkSize` byte chunks.
 ## API
 
 #### `var chunker = require('stream-chunker')(chunkSize, [opts])`
-Returns a new chunker. Chunker is a duplex (tansform) stream. You can write data into the
+Returns a new chunker. Chunker is a duplex (transform) stream. You can write data into the
 chunker, and regardless of the incoming data, the readable side will emit data
 in `chunkSize` byte chunks. This modules has no notion of `objectMode`, everything
 written to this stream must be a `string` or a `buffer`.
 
 - `chunkSize`: `integer` - Size in bytes of the desired chunks.
-- opts
+- `opts`
   - `flush`: `boolean` - Optional. Flush incomplete chunk data on stream end. Default is `false`.
   - `encoding`: `string` - Optional. Encoding of String chunks. Must be a valid Buffer encoding, such as `utf8` or `ascii`.
 
 ## Simple Example
 ```
 var fs = require('fs');
-var chunker = require('stream-chunker'); 
+var chunker = require('stream-chunker');
 
 fs.createReadStream('/someFile')
   	.pipe(chunker(16))
   	.pipe(somethingThatExpects16ByteChunks());
 ```
 
-## Full Working Example 
+## Full Working Example
 ```javascript
 // Create sample input stream with 10 byte chunks
 var Lorem = require('loremipstream');

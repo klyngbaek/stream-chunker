@@ -1,5 +1,5 @@
 /**
- * @copyright Kristian Lyngbaek
+ * @copyright (c) 2014-2015 Kristian Lyngbaek
  * @author Kristian Lyngbaek
  * @module stream-chunker
  */
