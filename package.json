@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "npm run lint && tape test/*",
-    "lint": "jshint **.js"
+    "lint": "jshint **.js",
+    "cover": "istanbul cover tape test/*",
+    "coveralls": "npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls"
   },
   "keywords": [
     "stream",
@@ -26,6 +28,8 @@
   "devDependencies": {
     "chunky": "~0.0.0",
     "concat-stream": "~1.5.0",
+    "coveralls": "^2.11.6",
+    "istanbul": "^0.4.2",
     "jshint": "^2.9.1",
     "loremipstream": "~0.0.3 ",
     "tape": "~4.4.0"
