@@ -7,6 +7,7 @@ A transform stream which chunks incoming data into `chunkSize` byte chunks.
 [![NPM](https://nodei.co/npm/stream-chunker.png)](https://nodei.co/npm/stream-chunker/)
 [![Dependency Status](https://david-dm.org/klyngbaek/stream-chunker.svg)](https://david-dm.org/klyngbaek/stream-chunker)
 [![devDependency Status](https://david-dm.org/klyngbaek/stream-chunker/dev-status.svg)](https://david-dm.org/klyngbaek/stream-chunker#info=devDependencies)
+[![Coverage Status](https://coveralls.io/repos/github/klyngbaek/stream-chunker/badge.svg?branch=master)](https://coveralls.io/github/klyngbaek/stream-chunker?branch=master)
 
 ## API
 
