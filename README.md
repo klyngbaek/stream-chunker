@@ -5,6 +5,8 @@ A transform stream which chunks incoming data into `chunkSize` byte chunks.
 [![build status](https://secure.travis-ci.org/klyngbaek/stream-chunker.png)](http://travis-ci.org/klyngbaek/stream-chunker)
 
 [![NPM](https://nodei.co/npm/stream-chunker.png)](https://nodei.co/npm/stream-chunker/)
+[![Dependency Status](https://david-dm.org/klyngbaek/stream-chunker.svg)](https://david-dm.org/klyngbaek/stream-chunker)
+[![devDependency Status](https://david-dm.org/klyngbaek/stream-chunker/dev-status.svg)](https://david-dm.org/klyngbaek/stream-chunker#info=devDependencies)
 
 ## API
 
