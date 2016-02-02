@@ -2,12 +2,12 @@
 
 A transform stream which chunks incoming data into `chunkSize` byte chunks.
 
-[![build status](https://secure.travis-ci.org/klyngbaek/stream-chunker.png)](http://travis-ci.org/klyngbaek/stream-chunker)
-
 [![NPM](https://nodei.co/npm/stream-chunker.png)](https://nodei.co/npm/stream-chunker/)
+
+[![Build Status](https://travis-ci.org/klyngbaek/stream-chunker.svg?branch=master)](https://travis-ci.org/klyngbaek/stream-chunker)
+[![Coverage Status](https://coveralls.io/repos/github/klyngbaek/stream-chunker/badge.svg?branch=master)](https://coveralls.io/github/klyngbaek/stream-chunker?branch=master)
 [![Dependency Status](https://david-dm.org/klyngbaek/stream-chunker.svg)](https://david-dm.org/klyngbaek/stream-chunker)
 [![devDependency Status](https://david-dm.org/klyngbaek/stream-chunker/dev-status.svg)](https://david-dm.org/klyngbaek/stream-chunker#info=devDependencies)
-[![Coverage Status](https://coveralls.io/repos/github/klyngbaek/stream-chunker/badge.svg?branch=master)](https://coveralls.io/github/klyngbaek/stream-chunker?branch=master)
 
 ## API
 
