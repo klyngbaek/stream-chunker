@@ -20,6 +20,7 @@ written to this stream must be a `string` or a `buffer`.
 - `chunkSize`: `integer` - Size in bytes of the desired chunks.
 - `opts`
   - `flush`: `boolean` - Optional. Flush incomplete chunk data on stream end. Default is `false`.
+  - `align`: `boolean` - Optional. Pad incomplete chunk data on stream end. Should be used in combination with `flush`. Default is `false`.
   - `encoding`: `string` - Optional. Encoding of String chunks. Must be a valid Buffer encoding, such as `utf8` or `ascii`.
 
 ## Simple Example
