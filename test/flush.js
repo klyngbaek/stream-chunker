@@ -39,3 +39,25 @@ test('Test flush option', function (t) {
     chunkerFlush.end();
     
 });
+
+test('Test align option', function (t) {
+    t.plan(1);
+
+    var optsFlushAlign = {
+        flush: true,
+        align: true,
+        encoding: 'utf8'
+    }
+
+    function checkFlushAlign(data) {
+        t.equals(data, '12345\0\0\0', 'Received flush data');
+    }
+    var chunkerFlushAlign = Chunker(4, optsFlushAlign);
+    var concatStreamFlushAlign = concat(checkFlushAlign);
+    chunkerFlushAlign.pipe(concatStreamFlushAlign);
+    chunkerFlushAlign.write('12');
+    chunkerFlushAlign.write('34');
+    chunkerFlushAlign.write('5');
+    chunkerFlushAlign.end();
+
+});
