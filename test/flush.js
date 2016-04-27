@@ -41,7 +41,8 @@ test('Test flush option', function (t) {
 });
 
 test('Test align option', function (t) {
-    t.plan(1);
+
+    t.plan(2);
 
     var optsFlushAlign = {
         flush: true,
@@ -59,5 +60,15 @@ test('Test align option', function (t) {
     chunkerFlushAlign.write('34');
     chunkerFlushAlign.write('5');
     chunkerFlushAlign.end();
+
+    function checkAlignedFlushAlign(data) {
+        t.equals(data, '1234', 'Received flush data');
+    }
+    var chunkerAlignedFlushAlign = Chunker(4, optsFlushAlign);
+    var concatStreamAlignedFlushAlign = concat(checkAlignedFlushAlign);
+    chunkerAlignedFlushAlign.pipe(concatStreamAlignedFlushAlign);
+    chunkerAlignedFlushAlign.write('12');
+    chunkerAlignedFlushAlign.write('34');
+    chunkerAlignedFlushAlign.end();
 
 });

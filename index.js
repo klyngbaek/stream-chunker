@@ -46,7 +46,7 @@ module.exports = function (chunkSize, opts) {
     if (flush) {
         flushFunction = function (next) {
 
-            if (opts.align) {
+            if (opts.align && buffer.length > 0) {
               var remaining = new Buffer(chunkSize - buffer.length);
               remaining.fill(0);
               buffer = Buffer.concat([ buffer, remaining ], chunkSize);
